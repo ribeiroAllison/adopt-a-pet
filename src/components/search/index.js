@@ -3,9 +3,12 @@ import { useHistory } from 'react-router-dom';
 
 const Search = () => {
 
-const history = useHistory();
+  const history = useHistory();
 
   const searchInputRef = useRef();
+
+  
+  
 
   const onSearchHandler = (e) => {
     e.preventDefault();
@@ -14,7 +17,7 @@ const history = useHistory();
       name: searchInputRef.current.value
     }).toString();
 
-    history.push(`search?${searchQuery}`);
+    history.push(`/search?${searchQuery}`);
   };
 
   return (
